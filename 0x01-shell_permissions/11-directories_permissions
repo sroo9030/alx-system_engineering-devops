@@ -1,2 +1,2 @@
 #!/bin/bash
-type d -exec chmod -R 755 . 
+chmod -R 755 . 
