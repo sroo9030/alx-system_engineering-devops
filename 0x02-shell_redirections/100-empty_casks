@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -sa | sort | find . -empty | cut -d '/' -f1
+find . -empty | cut -d '/' -f1
