@@ -1,2 +1,2 @@
 #!/bin/bash
-gpg
+cut -d' ' -f1
