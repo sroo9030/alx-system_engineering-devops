@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# a Bash script that accepts one argument and run whoami command
+
+echo $1 || whoami
