@@ -9,22 +9,16 @@ import sys
 
 def fetch_employee_data(employee_id):
     """Fetch employee name and TODO list using the provided employee ID."""
-    try:
-        user_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-        user_response = requests.get(user_url)
-        user_data = user_response.json()
+    user_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
+    todos_url = (
+        f"https://jsonplaceholder.typicode.com/todos"
+        f"?userId={employee_id}"
+    )
 
-        todos_url = (
-            f"https://jsonplaceholder.typicode.com/todos"
-            f"?userId={employee_id}"
-        )
-        todos_response = requests.get(todos_url)
-        todos_data = todos_response.json()
+    user_response = requests.get(user_url).json()
+    todos_response = requests.get(todos_url).json()
 
-        return user_data, todos_data
-    except requests.RequestException as e:
-        print(f"An error occurred: {e}")
-        sys.exit(1)
+    return user_response, todos_response
 
 
 def display_todo_progress(employee_id):
