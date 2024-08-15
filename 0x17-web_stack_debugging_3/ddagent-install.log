@@ -1,0 +1,264 @@
+[34m
+* Datadog Agent 7 install script v1.33.0
+[0m
+/usr/bin/systemctl
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Hit:1 http://sd.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://ppa.launchpad.net/obsproject/obs-studio/ubuntu focal InRelease
+Get:3 http://sd.archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+Ign:5 http://ppa.launchpad.net/webupd8team/sublime-text-3/ubuntu focal InRelease
+Err:6 http://ppa.launchpad.net/webupd8team/sublime-text-3/ubuntu focal Release
+  404  Not Found [IP: 2620:2d:4000:1::81 80]
+Hit:7 http://sd.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:8 http://security.ubuntu.com/ubuntu xenial-security InRelease
+Get:9 https://dl.google.com/linux/chrome/deb stable InRelease [1,825 B]
+Hit:10 https://download.sublimetext.com apt/stable/ InRelease
+Hit:11 https://deb.nodesource.com/node_14.x focal InRelease
+Get:12 http://sd.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [1,016 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [795 kB]
+Get:14 https://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1,101 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,125 kB]
+Get:16 http://sd.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,495 kB]
+Get:17 http://sd.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [543 kB]
+Get:18 http://sd.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,219 kB]
+Get:19 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [464 kB]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [14.1 kB]
+Get:21 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [999 kB]
+Get:22 http://sd.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [801 kB]
+Get:23 http://sd.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [294 kB]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [674 kB]
+Get:25 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [212 kB]
+Get:26 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [21.1 kB]
+Reading package lists...
+E: The repository 'http://ppa.launchpad.net/webupd8team/sublime-text-3/ubuntu focal Release' does not have a Release file.
+[31m'apt-get update' failed, the script will not install the latest version of apt-transport-https.[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+gnupg is already the newest version (2.2.19-3ubuntu2.2).
+gnupg set to manually installed.
+apt-transport-https is already the newest version (2.0.10).
+The following packages were automatically installed and are no longer required:
+  gir1.2-goa-1.0 gyp libc-ares2 libfprint-2-tod1 libfwupdplugin1
+  libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer
+  libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libuv1-dev
+  libxmlb1 node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex
+  node-ansi-styles node-ansistyles node-aproba node-archy
+  node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit
+  node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules
+  node-builtins node-cacache node-call-limit node-camelcase node-caseless
+  node-chalk node-chownr node-ci-info node-cli-boxes node-cliui node-clone
+  node-co node-color-convert node-color-name node-colors node-columnify
+  node-combined-stream node-concat-map node-concat-stream node-config-chain
+  node-configstore node-console-control-strings node-copy-concurrently
+  node-core-util-is node-cross-spawn node-crypto-random-string node-cyclist
+  node-dashdash node-debug node-decamelize node-decompress-response
+  node-deep-extend node-defaults node-define-properties node-delayed-stream
+  node-delegates node-detect-indent node-detect-newline node-dot-prop
+  node-duplexer3 node-duplexify node-ecc-jsbn node-editor node-encoding
+  node-end-of-stream node-err-code node-errno node-es6-promise
+  node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent
+  node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun
+  node-get-caller-file node-get-stream node-getpass node-glob node-got
+  node-graceful-fs node-har-schema node-har-validator node-has-flag
+  node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode
+  node-hosted-git-info node-http-signature node-iconv-lite node-iferr
+  node-import-lazy node-imurmurhash node-inflight node-inherits node-ini
+  node-invert-kv node-ip node-ip-regex node-is-npm node-is-obj node-is-object
+  node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream
+  node-is-typedarray node-isarray node-isexe node-isstream node-isurl
+  node-jsbn node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream
+  node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages
+  node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime
+  node-mime-types node-mimic-fn node-mimic-response node-minimatch
+  node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms
+  node-mute-stream node-nopt node-normalize-package-data node-npm-bundled
+  node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan
+  node-oauth-sign node-object-assign node-once node-opener node-os-locale
+  node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise
+  node-p-limit node-p-locate node-p-timeout node-package-json
+  node-parallel-transform node-path-exists node-path-is-absolute
+  node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump
+  node-pumpify node-punycode node-qs node-qw node-rc node-read
+  node-read-package-json node-readable-stream node-registry-auth-token
+  node-registry-url node-request node-require-directory
+  node-require-main-filename node-resolve node-resolve-from node-retry
+  node-rimraf node-run-queue node-safe-buffer node-semver node-semver-diff
+  node-set-blocking node-sha node-shebang-command node-shebang-regex
+  node-signal-exit node-slash node-slide node-sorted-object node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sshpk node-ssri node-stream-each node-stream-iterate node-stream-shift
+  node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi
+  node-strip-eof node-strip-json-comments node-supports-color node-tar
+  node-term-size node-text-table node-through node-through2 node-timed-out
+  node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename
+  node-unique-string node-unpipe node-uri-js node-url-parse-lax
+  node-url-to-options node-util-deprecate node-uuid
+  node-validate-npm-package-license node-validate-npm-package-name node-verror
+  node-wcwidth.js node-which node-which-module node-wide-align
+  node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic
+  node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser python-pkg-resources python2 python2-minimal python2.7
+  python2.7-minimal
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libcurl4
+The following NEW packages will be installed:
+  curl
+The following packages will be upgraded:
+  libcurl4
+1 upgraded, 1 newly installed, 0 to remove and 92 not upgraded.
+Need to get 396 kB of archives.
+After this operation, 413 kB of additional disk space will be used.
+Get:1 http://sd.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.23 [235 kB]
+Get:2 http://sd.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.23 [161 kB]
+Fetched 396 kB in 4s (88.9 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 217670 files and directories currently installed.)
+Preparing to unpack .../libcurl4_7.68.0-1ubuntu2.23_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.23) over (7.68.0-1ubuntu2.22) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.68.0-1ubuntu2.23_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.23) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.23) ...
+Setting up curl (7.68.0-1ubuntu2.23) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.16) ...
+[34m
+* Installing APT package sources for Datadog
+[0m
+gpg: directory '/root/.gnupg' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key E6266D4AC0962C7D: public key "Datadog, Inc. APT key (2023-04-20) (APT key) <package+aptkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: key 0D826EB906462314: public key "Datadog, Inc. APT key (2024-05-15) (APT key) <package+aptkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: key E6266D4AC0962C7D: "Datadog, Inc. APT key (2023-04-20) (APT key) <package+aptkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: key 32637D44F14F620E: public key "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: key D3A80E30382E94DE: public key "Datadog, Inc <package@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+Ign:1 https://apt.datadoghq.com stable InRelease
+Get:2 https://apt.datadoghq.com stable Release [26.0 kB]
+Get:3 https://apt.datadoghq.com stable Release.gpg [801 B]
+Get:4 https://apt.datadoghq.com stable/7 amd64 Packages [78.1 kB]
+Get:5 https://apt.datadoghq.com stable/7 i386 Packages [1,073 B]
+Get:6 https://apt.datadoghq.com stable/7 all Packages [1,073 B]
+Fetched 107 kB in 8s (13.3 kB/s)
+Reading package lists...
+  [33mInstalling package(s): datadog-agent datadog-signing-keys
+[0m
+tee: /tmp/ddog_install_error_msg: Permission denied
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  gir1.2-goa-1.0 gyp libc-ares2 libfprint-2-tod1 libfwupdplugin1
+  libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer
+  libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libuv1-dev
+  libxmlb1 node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex
+  node-ansi-styles node-ansistyles node-aproba node-archy
+  node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit
+  node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules
+  node-builtins node-cacache node-call-limit node-camelcase node-caseless
+  node-chalk node-chownr node-ci-info node-cli-boxes node-cliui node-clone
+  node-co node-color-convert node-color-name node-colors node-columnify
+  node-combined-stream node-concat-map node-concat-stream node-config-chain
+  node-configstore node-console-control-strings node-copy-concurrently
+  node-core-util-is node-cross-spawn node-crypto-random-string node-cyclist
+  node-dashdash node-debug node-decamelize node-decompress-response
+  node-deep-extend node-defaults node-define-properties node-delayed-stream
+  node-delegates node-detect-indent node-detect-newline node-dot-prop
+  node-duplexer3 node-duplexify node-ecc-jsbn node-editor node-encoding
+  node-end-of-stream node-err-code node-errno node-es6-promise
+  node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent
+  node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun
+  node-get-caller-file node-get-stream node-getpass node-glob node-got
+  node-graceful-fs node-har-schema node-har-validator node-has-flag
+  node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode
+  node-hosted-git-info node-http-signature node-iconv-lite node-iferr
+  node-import-lazy node-imurmurhash node-inflight node-inherits node-ini
+  node-invert-kv node-ip node-ip-regex node-is-npm node-is-obj node-is-object
+  node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream
+  node-is-typedarray node-isarray node-isexe node-isstream node-isurl
+  node-jsbn node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream
+  node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages
+  node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime
+  node-mime-types node-mimic-fn node-mimic-response node-minimatch
+  node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms
+  node-mute-stream node-nopt node-normalize-package-data node-npm-bundled
+  node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan
+  node-oauth-sign node-object-assign node-once node-opener node-os-locale
+  node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise
+  node-p-limit node-p-locate node-p-timeout node-package-json
+  node-parallel-transform node-path-exists node-path-is-absolute
+  node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump
+  node-pumpify node-punycode node-qs node-qw node-rc node-read
+  node-read-package-json node-readable-stream node-registry-auth-token
+  node-registry-url node-request node-require-directory
+  node-require-main-filename node-resolve node-resolve-from node-retry
+  node-rimraf node-run-queue node-safe-buffer node-semver node-semver-diff
+  node-set-blocking node-sha node-shebang-command node-shebang-regex
+  node-signal-exit node-slash node-slide node-sorted-object node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sshpk node-ssri node-stream-each node-stream-iterate node-stream-shift
+  node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi
+  node-strip-eof node-strip-json-comments node-supports-color node-tar
+  node-term-size node-text-table node-through node-through2 node-timed-out
+  node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename
+  node-unique-string node-unpipe node-uri-js node-url-parse-lax
+  node-url-to-options node-util-deprecate node-uuid
+  node-validate-npm-package-license node-validate-npm-package-name node-verror
+  node-wcwidth.js node-which node-which-module node-wide-align
+  node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic
+  node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser python-pkg-resources python2 python2-minimal python2.7
+  python2.7-minimal
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  datadog-agent datadog-signing-keys
+0 upgraded, 2 newly installed, 0 to remove and 92 not upgraded.
+Need to get 273 MB of archives.
+After this operation, 1,265 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.55.3-1 [273 MB]
+[31mERROR
+Failed to install one or more packages, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Datadog Agent.
+
+    
+
+Troubleshooting and basic usage information for the Datadog Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+[0m
