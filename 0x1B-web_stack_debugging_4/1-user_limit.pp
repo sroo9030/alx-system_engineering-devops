@@ -3,7 +3,7 @@
 user { 'holberton':
   ensure     => present,
   managehome => true,
-  password   => 'your_encrypted_password_here',  # Use encrypted password
+  password   => 'your_encrypted_password_here', 
 }
 
 group { 'sudo':
@@ -27,3 +27,5 @@ file { '/path/to/directory':
   group   => 'holberton',
   mode    => '0755',
 }
+
+exec { '/usr/bin/env sed -i "s/holberton/foo/" /etc/security/limits.conf': }
